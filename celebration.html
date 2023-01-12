@@ -176,6 +176,159 @@
       </section>
 
       <!-- end celebration videos section -->
+      <!-- contact section -->
+
+      <section class="contact_section layout_padding-bottom">
+        <div class="container">
+          <div class="d-flex flex-column align-items-end">
+            <div class="custom_heading-container">
+              <hr />
+              <h2>Contact Us</h2>
+            </div>
+          </div>
+          <div class="layout_padding-top layout_padding2-bottom">
+            <div class="row">
+              <div class="col-md-7">
+                <form onsubmit="sendEmail(); reset(); return false;">
+                  <div class="contact_form-container">
+                    <div>
+                      <div>
+                        <input
+                          type="text"
+                          id="name"
+                          placeholder="Name"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <input
+                          type="email"
+                          id="email"
+                          placeholder="Email"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <input
+                          type="text"
+                          id="phone"
+                          placeholder="Phone Number"
+                          required
+                        />
+                      </div>
+                      <div class="">
+                        <input
+                          type="text"
+                          id="message"
+                          placeholder="Message"
+                          class="message_input"
+                        />
+                      </div>
+                      <div class="mt-5">
+                        <button type="submit">send</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="contact_items">
+            <a>
+              <div class="item">
+                <div class="img-box box-2"></div>
+                <div class="detail-box">
+                  <p>+2348161179603</p>
+                </div>
+              </div>
+            </a>
+            <a>
+              <div class="item">
+                <div class="img-box box-3"></div>
+                <div class="detail-box">
+                  <p>worldseshorian@gmail.com</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- end contact section -->
+
+      <!-- info section -->
+      <section class="info_section layout_padding">
+        <div class="container">
+          <div class="info_social">
+            <div>
+              <a
+                href="https://web.facebook.com/profile.php?id=100077358160432"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="images/fb.png" alt="" />
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://www.linkedin.com/in/segun-esho-698baa1bb/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="images/linkedin.png" alt="" />
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://www.instagram.com/seshorian_world/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="images/insta.png" alt="" />
+              </a>
+            </div>
+          </div>
+          <div>
+            <p>Follow us on our social media platforms</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- end info_section -->
+
+      <!-- footer section -->
+      <section class="container-fluid footer_section">
+        <p>
+          &copy; 2023 All Rights Reserved By
+          <a href="">Seshorian World Media</a>
+        </p>
+      </section>
+      <!--end footer section -->
+
+      <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap.js"></script>
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+      <script>
+        function sendEmail() {
+          Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "worldseshorian@gmail.com",
+            Password: "91CDA95ECEE10A10C759F7381DBED8144ACE",
+            To: "worldseshorian@gmail.com",
+            From: document.getElementById("email").value,
+            Subject: "New contact form enquiry",
+            Body:
+              "Name: " +
+              document.getElementById("name").value +
+              "<br> Email: " +
+              document.getElementById("email").value +
+              "<br> Phone no: " +
+              document.getElementById("phone").value +
+              "<br> Message: " +
+              document.getElementById("message").value,
+          }).then((message) => alert("Message Sent Succesfully"));
+        }
+      </script>
     </div>
   </body>
 </html>
